@@ -15,7 +15,7 @@ const url =
     } else {
       callback(
         undefined,
-        `It is currently ${body.current.temperature}, but it feels like ${body.current.feelslike}`
+        `It is currently ${body.current.temperature}, but it feels like ${body.current.feelslike} also its ${body.current.weather_descriptions[0]} here!`
       );
     }
   });
