@@ -18,7 +18,7 @@ weatherForm.addEventListener('submit', (e)=> {
 // fetch is available for client side js only, cannot be used on the node backend
 // Its an asyncronous process just like request in node
 
-fetch("http://localhost:3000/weather?address="+location).then((resp) => {
+fetch("/weather?address="+location).then((resp) => {
   resp.json().then((data) => {
     if (data.error) {
       messageOne.textContent = data.error;

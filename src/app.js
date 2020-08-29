@@ -12,6 +12,7 @@ const viewsPath = path.join(__dirname, "../templates/views");
 const partialsPath = path.join(__dirname, "../templates/partials");
 // express is a function
 const app = express();
+const port = process.env.PORT || 3000;
 
 // to set up handlebar, dynamic content will be shared from the views folder
 // Setup handlebars engine and views location
@@ -117,8 +118,8 @@ app.get('*',(req, res)=> {
 })
 
 // start the server and will listen to a specific port
-app.listen(3000, () => {
-  console.log("server is up on port 3000");
+app.listen(port, () => {
+  console.log("server is up on port" + port);
 });
 
 // this command will tell the server to monitor changes in the files with these extentions and restart
